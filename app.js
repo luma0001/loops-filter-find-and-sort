@@ -91,6 +91,7 @@ function initApp() {
   createDom(names);
   //   teachers.forEach(ObjectToDom);
   loopTroughYears();
+  loopThroughFiveLastYears();
 }
 
 // ========== forEach ========== //
@@ -150,13 +151,25 @@ function domDown(element) {
 //   console.log(name);
 // }
 
+// opgave 1.2.1
+
 function loopTroughYears() {
   for (let i = 0; i < years.length; i++) {
-    // const year = years[i];
-    console.log(years[i] + " index: " + i);
+    if (i == years.length - 1) {
+      console.log(years[i] + " This is the last year in the list");
+    } else if (years[i] == 2023) {
+      console.log(years[i] + " This is the current year");
+    } else {
+      console.log(years[i] + " index: " + i);
+    }
   }
 }
 
+function loopThroughFiveLastYears() {
+  for (let i = 4; i < years.length; i++) {
+    console.log(years[i] + " index: " + i);
+  }
+}
 // ========== for of loop ========== //
 
 // ========== for in loop ========== //
