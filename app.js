@@ -82,21 +82,75 @@ const teacher = {
 
 // ========== initApp ========== //
 
+let sum = 0;
+
 function initApp() {
   console.log("initApp: app.js is running 🎉");
+  loopThroughNames();
+  createDom(years);
+  createDom(names);
+  //   teachers.forEach(ObjectToDom);
 }
 
 // ========== forEach ========== //
 
-// ========== for loop ========== //
-for (let index = 0; index < names.length; index++) {
-  const name = names[indexedDB];
-  console.log(name);
+// const names = ["Peter", "Oskar", "Lenka", "Rasmus"];
+
+function loopThroughNames() {
+  names.forEach(logName);
 }
+
+//Den ved hvad index betyder per automatic!
+function logName(name, index) {
+  //   sum++;
+  // console.log(sum);
+  console.log(name);
+
+  const message = checkIndex(index);
+
+  if (index == names.length - 1) {
+    console.log("IT'S THE FINAL INDEX!");
+  } else {
+    console.log(message);
+  }
+}
+
+function checkIndex(i) {
+  let outPut;
+  if (i % 2 == 0) {
+    outPut = "Hver Anden";
+  } else {
+    outPut = i;
+  }
+  return outPut;
+}
+
+//Extra øvelse med DOM:
+// Ikke særlig pænt, 1 liste...
+function createDom(arr) {
+  arr.forEach(domDown);
+  //textContent = function with dom...?
+}
+
+function domDown(element) {
+  const domHTML = /*html*/ `<li>${element}</li>`;
+  document.querySelector("#dom").insertAdjacentHTML("beforeend", domHTML);
+}
+
+// ========== for loop ========== //
+
+// for (let index = 0; index < names.length; index++) {
+//   const name = names[indexedDB];
+//   console.log(name);
+// }
 
 // for (let index = 9; index > names.length; index--) {
 //   const name = names[index];
 //   console.log(name);
+// }
+
+// function loopTroughYears() {
+//   for (let i = 0; i < years.length - 1; i++) {}
 // }
 
 // ========== for of loop ========== //
