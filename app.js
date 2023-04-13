@@ -190,13 +190,30 @@ function logNumbers() {
     console.log(i);
   }
 
-  //   let n = 10;
+  for (let n = 10; n > -1; n--) {
+    if (n == 0) {
+      console.log("liftoff");
+    } else {
+      console.log(n);
+    }
+  }
+  for (let c = 1; c < 20; c = c + 2) {
+    console.log(c);
+  }
 
-  //   for (; n > 0; ) {
-  //     console.log(n);
-  //     n--;
-  //   }
+  for (let index = 1; index < 16777216; index = index * 2) {
+    console.log(index);
+  }
+
+  for (let i = 111; i < 138; i = i + 3) {
+    console.log(i);
+  }
+
+  for (let i = 100; i > -1; i = i - 10) {
+    console.log(i);
+  }
 }
+
 // ========== for of loop ========== //
 
 // ========== for in loop ========== //
