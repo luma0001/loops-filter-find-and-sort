@@ -90,6 +90,7 @@ function initApp() {
   createDom(years);
   createDom(names);
   //   teachers.forEach(ObjectToDom);
+  loopTroughYears();
 }
 
 // ========== forEach ========== //
@@ -149,9 +150,12 @@ function domDown(element) {
 //   console.log(name);
 // }
 
-// function loopTroughYears() {
-//   for (let i = 0; i < years.length - 1; i++) {}
-// }
+function loopTroughYears() {
+  for (let i = 0; i < years.length; i++) {
+    // const year = years[i];
+    console.log(years[i] + " index: " + i);
+  }
+}
 
 // ========== for of loop ========== //
 
