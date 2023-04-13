@@ -91,7 +91,9 @@ function initApp() {
   createDom(names);
   //   teachers.forEach(ObjectToDom);
   loopTroughYears();
-  loopThroughFiveLastYears();
+  //   loopThroughFiveLastYears();
+  //   loopThroughFiveFirstYears();
+  logNumbers();
 }
 
 // ========== forEach ========== //
@@ -165,10 +167,35 @@ function loopTroughYears() {
   }
 }
 
+function loopThroughFiveFirstYears() {
+  for (let i = 0; i < 5; i++) {
+    console.log(years[i] + " index: " + i);
+  }
+}
+
 function loopThroughFiveLastYears() {
   for (let i = 4; i < years.length; i++) {
     console.log(years[i] + " index: " + i);
   }
+}
+
+// opgave 1.2.2 Numbers
+
+function logNumbers() {
+  for (let index = 0; index < 10; index++) {
+    console.log(index);
+  }
+
+  for (let i = 1; i < 11; i++) {
+    console.log(i);
+  }
+
+  //   let n = 10;
+
+  //   for (; n > 0; ) {
+  //     console.log(n);
+  //     n--;
+  //   }
 }
 // ========== for of loop ========== //
 
