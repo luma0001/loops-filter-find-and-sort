@@ -86,14 +86,16 @@ let sum = 0;
 
 function initApp() {
   console.log("initApp: app.js is running 🎉");
-  loopThroughNames();
-  createDom(years);
-  createDom(names);
+  // loopThroughNames();
+  // createDom(years);
+  // createDom(names);
   //   teachers.forEach(ObjectToDom);
   loopTroughYears();
   //   loopThroughFiveLastYears();
   //   loopThroughFiveFirstYears();
   logNumbers();
+  loopTeachers();
+  teachersOver40();
 }
 
 // ========== forEach ========== //
@@ -215,6 +217,22 @@ function logNumbers() {
 }
 
 // ========== for of loop ========== //
+function loopTeachers() {
+  for (const teacher of teachers) {
+    console.log(teacher);
+  }
+}
+
+function teachersOver40() {
+  const array = [];
+  for (const teacher of teachers) {
+    const alder = teacher.age;
+    if (alder > 39) {
+      array.push(teacher);
+    }
+  }
+  console.log(array);
+}
 
 // ========== for in loop ========== //
 
