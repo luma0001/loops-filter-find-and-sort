@@ -90,12 +90,14 @@ function initApp() {
   // createDom(years);
   // createDom(names);
   //   teachers.forEach(ObjectToDom);
-  loopTroughYears();
+  // loopTroughYears();
   //   loopThroughFiveLastYears();
   //   loopThroughFiveFirstYears();
-  logNumbers();
-  loopTeachers();
-  teachersOver40();
+  // logNumbers();
+  // loopTeachers();
+  // teachersOver40();
+  // forOfSearchTeacherByName("Peter");
+  forInExample();
 }
 
 // ========== forEach ========== //
@@ -234,8 +236,41 @@ function teachersOver40() {
   console.log(array);
 }
 
-// ========== for in loop ========== //
+function forOfSearchTeacherByName(searchValue) {
+  const restults = [];
+  for (const teacher of teachers) {
+    const searchName = searchValue.toLowerCase();
+    const teacherName = teacher.name.toLowerCase();
+    if (teacherName.includes(searchName)) {
+      restults.push(searchName);
+    } else {
+      console.log("Name is not pressent");
+    }
+  }
+  // for(teacher of teachers){
+  //   if (teacher.name == searchValue){
+  //   push()
+  //   }
+  // }
+  console.log(restults);
+}
 
+// ========== for in loop ========== //
+// For in anvendes til at gennemløbe alle properties i et objekt.
+
+function forInExample() {
+  const person = {
+    name: "Peter",
+    mail: "petl@kea.dk",
+    age: 45,
+  };
+
+  for (const key in person) {
+    console.log(key);
+    const value = person[key];
+    console.log(value);
+  }
+}
 // ========== while loops ========== //
 
 // ========== Filter items: array.filter(...) ========== //
