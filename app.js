@@ -99,6 +99,7 @@ function initApp() {
   // forOfSearchTeacherByName("Peter");
   forInExample();
   forInTeacher(teacher);
+  whileLoopExample();
 }
 
 // ========== forEach ========== //
@@ -281,7 +282,21 @@ function forInTeacher() {
   }
 }
 
+// ### 1.4.2. Hvorfor for in?
+// We can get all the keys easily...
+
 // ========== while loops ========== //
+
+// 1.5.1. Sålænge index er mindre end teachers.length
+
+function whileLoopExample() {
+  let index;
+  while (index < names.length) {
+    const name = names[index];
+    console.log(name);
+    index++;
+  }
+}
 
 // ========== Filter items: array.filter(...) ========== //
 
