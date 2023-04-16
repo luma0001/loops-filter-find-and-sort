@@ -98,6 +98,7 @@ function initApp() {
   // teachersOver40();
   // forOfSearchTeacherByName("Peter");
   forInExample();
+  forInTeacher(teacher);
 }
 
 // ========== forEach ========== //
@@ -271,6 +272,15 @@ function forInExample() {
     console.log(value);
   }
 }
+
+// 1.4.1. Gennemløb alle props i teacher
+
+function forInTeacher() {
+  for (const key in teacher) {
+    console.log(key + ": " + teacher[key]);
+  }
+}
+
 // ========== while loops ========== //
 
 // ========== Filter items: array.filter(...) ========== //
