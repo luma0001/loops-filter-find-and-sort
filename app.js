@@ -93,13 +93,15 @@ function initApp() {
   // loopTroughYears();
   //   loopThroughFiveLastYears();
   //   loopThroughFiveFirstYears();
-  // logNumbers();
+  logNumbers();
   // loopTeachers();
   // teachersOver40();
   // forOfSearchTeacherByName("Peter");
-  forInExample();
-  forInTeacher(teacher);
-  whileLoopExample();
+  // forInExample();
+  // forInTeacher(teacher);
+  // whileLoopExample();
+  someThing();
+  whileSearchByName("PeteR LinD");
 }
 
 // ========== forEach ========== //
@@ -290,12 +292,43 @@ function forInTeacher() {
 // 1.5.1. Sålænge index er mindre end teachers.length
 
 function whileLoopExample() {
-  let index;
+  let index = 0;
   while (index < names.length) {
     const name = names[index];
     console.log(name);
     index++;
   }
+}
+
+// 1.5.2. Hvis teacher er “Lecturer”
+function someThing() {
+  let i = 0;
+  while (i < teachers.length) {
+    const teacher = teachers[i];
+    // console.log(teacher.title);
+    if (teacher.title == "Lecturer") {
+      console.log(teacher.name);
+    }
+    i++;
+  }
+}
+
+function whileSearchByName(searchValue) {
+  const results = [];
+  let index = 0;
+  const searchName = searchValue.toLowerCase();
+
+  while (index < teachers.length) {
+    const teacher = teachers[index];
+    const teacherName = teacher.name.toLowerCase();
+    if (teacherName == searchName) {
+      results.push(searchName);
+    } else {
+      console.log("name is not there");
+    }
+    index++;
+  }
+  console.log(results);
 }
 
 // ========== Filter items: array.filter(...) ========== //
